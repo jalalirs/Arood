@@ -4,7 +4,6 @@ import copy
 import argparse
 from argparse import RawTextHelpFormatter
 
-BAD = 0
 
 def check_mogaraba(bayt):
 	b = "".join(bayt.split())
@@ -33,7 +32,6 @@ class Ba7ar:
 		self._rules = rules
 		self._parts = self._base.split()
 	def get_permutations(self,btype):
-		global BAD
 		rules = self._rules[btype]
 		perms_taf = []
 		for ruleset in rules:
@@ -47,9 +45,6 @@ class Ba7ar:
 				taf = " ".join(taf)
 				if check_mogaraba(taf):
 					perms_taf.append(taf)
-				else:
-					print(taf)
-					BAD += 1
 		return perms_taf
 
 
@@ -74,9 +69,9 @@ if __name__ == '__main__':
 
 	for perm in B7OOR[args.ba7ar_name].get_permutations(args.ba7ar_type):
 		print(perm)
-	count = 0
-	for bk,b7r in B7OOR.items():
-		for rule in b7r._rules:
-			perms =  b7r.get_permutations(rule)
-			count += len(perms)
-	print(count,BAD)
+	# count = 0
+	# for bk,b7r in B7OOR.items():
+	# 	for rule in b7r._rules:
+	# 		perms =  b7r.get_permutations(rule)
+	# 		count += len(perms)
+	# print(count)
