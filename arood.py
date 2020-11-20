@@ -69,9 +69,9 @@ if __name__ == '__main__':
 
 	for perm in B7OOR[args.ba7ar_name].get_permutations(args.ba7ar_type):
 		print(perm)
-	count = 0
-	for bk,b7r in B7OOR.items():
-		for rule in b7r._rules:
-			perms =  b7r.get_permutations(rule)
-			count += len(perms)
-	print(count)
+	# count = 0
+	# for bk,b7r in B7OOR.items():
+	# 	for rule in b7r._rules:
+	# 		perms =  b7r.get_permutations(rule)
+	# 		count += len(perms)
+	# print(count)
