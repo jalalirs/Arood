@@ -54,7 +54,7 @@ if __name__ == '__main__':
 	parser.add_argument('--ba7ar_type', required=True,help='tam\nmajzoo2\nmash6oor\nmanhook\nmo5alla3\nmowa77ad')
 	args = parser.parse_args()
 	
-	with open("./b7oordata.json") as f:
+	with open("./data.json") as f:
 		data = json.load(f)
 
 	Z7AFELAL = {}
@@ -68,10 +68,10 @@ if __name__ == '__main__':
 
 
 	for perm in B7OOR[args.ba7ar_name].get_permutations(args.ba7ar_type):
-		print(" ".join(perm))
-	# count = 0
-	# for bk,b7r in B7OOR.items():
-	# 	for rule in b7r._rules:
-	# 		perms =  b7r.get_permutations(rule)
-	# 		count += len(perms)
-	# print(count)
+		print(perm)
+	count = 0
+	for bk,b7r in B7OOR.items():
+		for rule in b7r._rules:
+			perms =  b7r.get_permutations(rule)
+			count += len(perms)
+	print(count)
