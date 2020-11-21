@@ -39,6 +39,7 @@ class Ba7ar:
 				# apply single permutation ze7af and 3elal
 				p = p.split()
 				idxs = [int(i) for i in list(ruleset.keys())]
+				taf = []
 				for ze,tidx in zip(p,idxs):
 					taf.append(Z7AFELAL[ze].apply(self._parts[tidx]))
 
